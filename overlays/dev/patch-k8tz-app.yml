@@ -1,0 +1,11 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: k8tz
+  namespace: argocd
+spec:
+  source:
+    targetRevision: 0.18.0 # A patcher dans les overlays
+    helm:
+      valuesObject:
+        timezone: Europe/Paris
